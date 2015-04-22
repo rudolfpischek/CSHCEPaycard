@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HCE Paycard</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="servicedesc">Test payment serv</string>
+    <string name="aiddescription">Test payment serv</string>
+    <string name="Visa">VISA</string>
+    <string name="Mastercard">Mastercard</string>
+    <string name="PPSE">Proximity payments</string>
+
+
+</resources>

@@ -1,0 +1,18 @@
+<host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android"
+                   android:description="@string/servicedesc"
+                   android:requireDeviceUnlock="false"
+                   android:apduServiceBanner="@drawable/my_banner">
+    <aid-group android:description="@string/aiddescription"
+               android:category="payment">
+
+        <!-- "2PAY.SYS.DDF01" is the name below in hex -->
+        <aid-filter android:name="325041592E5359532E4444463031" android:description="@string/PPSE"/>
+
+        <!-- VISA MSD AID -->
+        <aid-filter android:name="A0000000031010" android:description="@string/Visa"/>
+
+        <!-- Mastercard PayPass -->
+        <aid-filter android:name="A0000000041010" android:description="@string/Mastercard"/>
+
+    </aid-group>
+</host-apdu-service>

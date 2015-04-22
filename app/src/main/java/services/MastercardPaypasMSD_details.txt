@@ -1,0 +1,52 @@
+[Step 1] Select 2PAY.SYS.DDF01 to get the PSE directory
+IN : 00a404000e325041592e5359532e444446303100
+OUT: 6f2f840e325041592e5359532e4444463031a51dbf0c1a61184f07a0000000041010500a4d6173746572436172648701019000
+real DF Name on Card: 2PAY.SYS.DDF01
+ADF-Name (AID): a0000000041010
+Priortity Tag: 01
+Application name: MasterCard
+-------------------------------------------------------
+[Step 2] Select CC Applet
+IN : 00a4040007a000000004101000
+OUT: 6f1a8407a0000000041010a50f500a4d6173746572436172648701019000
+real AID on Card: a0000000041010
+FCI Issuer Discretionary Data  present!
+Priortity Tag: 01
+Application name: MasterCard
+-------------------------------------------------------
+[Step 3] Send GET PROCESSING OPTIONS command
+pdol:8300
+IN : 80a8000002830000
+OUT: 770a820200009404080101009000
+AIP: 0000
+AFL: 08010100
+-------------------------------------------------------
+[Step 4] Send READ RECORD going thru every record; Current: #1 of 1
+IN : 00b2010c00
+OUT: 70819e9f6c0200019f62060000000001c09f6306000000007e00564c4235323637353034xxxxxxxxxxxxxxxx5e535550504c4945442f4e4f5420202020202020202020202020205e313330343232313030303030303030303030303030303030303030303030309f6401039f6502000e9f660203f09f6b1352675041xxxxxxxxd13042210000000000000f9f6701039f680e0000000000000000000000001f039000
+Mag Stripe Application Version Number (Card): 0001
+Track 1 Bit Map for CVC3 (PCVC3TRACK1): 0000000001c0
+Track 1 Bit Map for UN and ATC (PUNATCTRACK1): 000000007e00
+Track 1 Nr of ATC Digits (NATCTRACK1): 03
+Track 2 Bit Map for CVC3 (PCVC3TRACK2): 000e
+Track 2 Bit Map for UN and ATC (PUNATCTRACK2): 03f0
+Track 2 Data var up to 19: 52675041xxxxxxxxd13042210000000000000f
+Track 2 Nr of ATC Digits (NATCTRACK2): 03
+Mag Stripe CVM List var up to 32: 0000000000000000000000001f03
+
+Decoded Information from Mag-Stripe:
+Name: SUPPLIED/NOT
+Number: 5267504xxxxxxxx
+ExpYear: 2013
+ExpMonth: 04
+Firstname: SUPPLIED
+LastName: NOT
+CardType: MasterCard
+Valid Checksum: true
+-------------------------------------------------------
+[Step 5] Cryptogramm
+IN : 802a8e80040000000100
+OUT: 770f9f61023ce39f6002a4189f360200c49000
+TAG_CVC3TRACK2: 3ce3
+ACT: 00c4
+TAG_CVC3TRACK1: a418
